@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react"
 
-export default function UnderwaterBackground({
+export default function UnderWaterBackground({
   bubbleFrequency = 0.1,
   fishCount = 5,
   seaweedCount = 10,

@@ -43,7 +43,7 @@ import SideRight from './components/SideRight'
 import CONFIG from './config'
 import { Style } from './style'
 import AISummary from '@/components/AISummary'
-import UnderwaterBackground from './components/UnderwaterBackground'
+import UnderWaterBackground from './components/UnderWaterBackground'
 
 /**
  * 基础布局 采用上中下布局，移动端使用顶部侧边导航栏
@@ -97,7 +97,7 @@ const LayoutBase = props => {
       id='theme-heo'
       className={`${siteConfig('FONT_STYLE')} bg-[#f7f9fe] dark:bg-[#18171d] h-full min-h-screen flex flex-col scroll-smooth`}>
       {/* 水下背景 - 设置为z-index: -1，确保它在内容后面 */}
-      <UnderwaterBackground zIndex={-1} />
+      <UnderWaterBackground zIndex={-1} />
       <Style />
 
       {/* 顶部嵌入 导航栏，首页放hero，文章页放文章详情 */}
