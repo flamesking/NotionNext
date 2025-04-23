@@ -43,7 +43,7 @@ import SideRight from './components/SideRight'
 import CONFIG from './config'
 import { Style } from './style'
 import AISummary from '@/components/AISummary'
-import UnderwaterBackground from './components/UnderwaterBackground.js'
+import UnderwaterBackground from './components/UnderwaterBackground'
 
 /**
  * 基础布局 采用上中下布局，移动端使用顶部侧边导航栏
