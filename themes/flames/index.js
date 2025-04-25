@@ -44,6 +44,8 @@ import CONFIG from './config'
 import { Style } from './style'
 import AISummary from '@/components/AISummary'
 import UnderWaterBackground from './components/background'
+import EquipmentSection from './components/EquipmentSection';
+
 
 /**
  * 基础布局 采用上中下布局，移动端使用顶部侧边导航栏
@@ -420,6 +422,39 @@ const Layout404 = props => {
     </>
   )
 }
+/**
+ * 装备
+ * @param {*} props
+ * @returns
+ */
+const LayoutOutfit = props => {
+  // const { meta, siteInfo } = props
+  const { onLoading, fullWidth } = useGlobal()
+  return (
+    <>
+      {/* 主区块 */}
+      <main
+        id='wrapper-outer'
+        className={`flex-grow ${fullWidth ? '' : 'max-w-4xl'} w-screen mx-auto px-5`}>
+        <div id='error-wrapper' className={'w-full mx-auto justify-center'}>
+          <Transition
+            show={!onLoading}
+            appear={true}
+            enter='transition ease-in-out duration-700 transform order-first'
+            enterFrom='opacity-0 translate-y-16'
+            enterTo='opacity-100'
+            leave='transition ease-in-out duration-300 transform'
+            leaveFrom='opacity-100 translate-y-0'
+            leaveTo='opacity-0 -translate-y-16'
+            unmount={false}>
+              <EquipmentSection />
+
+          </Transition>
+        </div>
+      </main>
+    </>
+  )
+}
 
 /**
  * 分类列表
@@ -515,5 +550,6 @@ export {
   LayoutSearch,
   LayoutSlug,
   LayoutTagIndex,
+  LayoutOutfit,
   CONFIG as THEME_CONFIG
 }

@@ -10,6 +10,7 @@ import RandomPostButton from './RandomPostButton'
 import ReadingProgress from './ReadingProgress'
 import SearchButton from './SearchButton'
 import SlideOver from './SlideOver'
+import ControlPanel from './ControlPanel'
 
 /**
  * 页头：顶部导航
@@ -178,6 +179,7 @@ const Header = props => {
               </div>
             )}
             <ReadingProgress />
+            <ControlPanel />
 
             {/* 移动端菜单按钮 */}
             <div
